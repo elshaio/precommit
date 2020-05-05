@@ -1,0 +1,11 @@
+#!/bin/sh
+npm run lint
+ESTATUS_CODE=$?
+if [ 1 -eq $ESTATUS_CODE  ]; then
+    echo ".:::::...::..:::::...::...::.."
+    echo ".:.:: You need fix lint ::.:."
+    echo "Please run npm run lint:fix"
+    echo "ConCredito SIMCO  pre commit"
+    echo ".:::::...::..:::::...::...::.."
+    exit 1
+fi
